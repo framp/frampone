@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>FRAMPONE&reg;</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <style>
+  body{
+    background: #fff;
+    color: #fff;
+    margin: 0px;
+    padding: 0px;
+  }
+  #container{
+    font-family: Helvetica Neue;
+    font-weight: bold;
+    font-size: 49px;
+    border: 10px solid #fff;
+    width: 370px;
+    padding: 5px;
+    padding-top: 300px;
+    position: relative;
+    margin: 25px;
+  }
+  #brand{
+    float: left;
+    margin-left: 35px;
+    margin-bottom: 17px;
+  }
+  #reg{
+    float: left;
+    font-size: 50%;
+    margin-top: 5px;
+    margin-left: 5px;
+    display: block;
+  }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="brand">FRAMPONE</div>
+    <div>&reg;</div>
+    <div style="clear:both"></div>  
+  </div>
+<script>
+var colors = [
+  "rgb(155, 183, 212)", "rgb(199, 67, 117)", "rgb(191, 25, 50)", 
+  "rgb(123, 196, 196)", "rgb(226, 88, 62)", "rgb(83, 176, 174)", 
+  "rgb(222, 205, 190)", "rgb(155, 27, 48)", "rgb(90, 91, 159)", 
+  "rgb(240, 192, 90)", "rgb(69, 181, 170)", "rgb(217, 79, 112)",
+  "rgb(221, 65, 36)", "rgb(0, 148, 115)", "rgb(177, 99, 163)"
+];
+var color = 0;
+(function loop(){
+  document.body.style.backgroundColor = colors[color];
+  color++;
+  if (color===colors.length) color = 0;
+  setTimeout(loop, 1000);
+})();
+</script>
+</body>
+</html>
