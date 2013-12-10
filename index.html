@@ -13,6 +13,10 @@
   }
   body{
     float:left;
+    background: rgb(155, 183, 212);
+    animation-direction: alternate;
+    animation:loop 45s infinite;
+    -webkit-animation:loop 45s infinite; 
   }
   #container {
     display: inline-block;
@@ -79,6 +83,44 @@
       font-size: 1.6em;
     }
   }
+
+  @keyframes loop{
+    0% {background: rgb(155, 183, 212)}
+    6.66% {background: rgb(199, 67, 117)}
+    13.33% {background: rgb(191, 25, 50)}
+    20% {background: rgb(123, 196, 196)}
+    26.66% {background: rgb(226, 88, 62)}
+    33.33% {background: rgb(83, 176, 174)}
+    40% {background: rgb(222, 205, 190)}
+    46.66% {background: rgb(155, 27, 48)}
+    53.33% {background: rgb(90, 91, 159)}
+    60% {background: rgb(240, 192, 90)}
+    66.66% {background: rgb(69, 181, 170)}
+    73.33% {background: rgb(217, 79, 112)}
+    80% {background: rgb(221, 65, 36)}
+    86.66% {background: rgb(0, 148, 115)}
+    93.33% {background: rgb(177, 99, 163)}
+    100% {background: rgb(155, 183, 212)}
+  }
+  
+  @-webkit-keyframes loop{
+    0% {background: rgb(155, 183, 212)}
+    6.66% {background: rgb(199, 67, 117)}
+    13.33% {background: rgb(191, 25, 50)}
+    20% {background: rgb(123, 196, 196)}
+    26.66% {background: rgb(226, 88, 62)}
+    33.33% {background: rgb(83, 176, 174)}
+    40% {background: rgb(222, 205, 190)}
+    46.66% {background: rgb(155, 27, 48)}
+    53.33% {background: rgb(90, 91, 159)}
+    60% {background: rgb(240, 192, 90)}
+    66.66% {background: rgb(69, 181, 170)}
+    73.33% {background: rgb(217, 79, 112)}
+    80% {background: rgb(221, 65, 36)}
+    86.66% {background: rgb(0, 148, 115)}
+    93.33% {background: rgb(177, 99, 163)}
+    100% {background: rgb(155, 183, 212)}
+  }
   
   </style>
 </head>
@@ -87,21 +129,5 @@
     <div id="dummy">
     <div id="brand">FRAMPONE<sup>&reg;</sup></div>
   </div>
-<script>
-var colors = [
-  "rgb(155, 183, 212)", "rgb(199, 67, 117)", "rgb(191, 25, 50)", 
-  "rgb(123, 196, 196)", "rgb(226, 88, 62)", "rgb(83, 176, 174)", 
-  "rgb(222, 205, 190)", "rgb(155, 27, 48)", "rgb(90, 91, 159)", 
-  "rgb(240, 192, 90)", "rgb(69, 181, 170)", "rgb(217, 79, 112)",
-  "rgb(221, 65, 36)", "rgb(0, 148, 115)", "rgb(177, 99, 163)"
-];
-var color = 0;
-(function loop(){
-  document.body.style.backgroundColor = colors[color];
-  color++;
-  if (color===colors.length) color = 0;
-  setTimeout(loop, 1000);
-})();
-</script>
 </body>
 </html>
